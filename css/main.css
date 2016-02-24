@@ -1,0 +1,335 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-top: 0;
+    color: #4a4a4a;
+    font-family: Arial, Verdana, sans-serif;
+}
+
+h2 {
+    font-size: 1.1em;
+    color: #4a4a4a;
+    font-family: Arial, Verdana, sans-serif;
+}
+
+h3 {
+    color: #878787;
+    font-weight: normal;
+    line-height: 1.5;
+    font-family: Arial, Verdana, sans-serif;
+}
+
+h4 {
+    color: #4a4a4a;
+    font-size: 1.4em;
+    font-weight: normal;
+    font-family: Arial, Verdana, sans-serif;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.4;
+    font-family: Arial, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color:#4a4a4a; 
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 90%;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* --------- Navigation --------- */
+
+
+.navigation-container ul{
+    display: block;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.navigation-container li {
+    display: block;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 20px 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+}
+
+/* ----- Layout Containers ----- */
+
+.wrapper {
+    padding-right: 1em;
+    padding-left: 1em;
+    margin: 0 auto;
+}
+
+.main-header {
+    background-color: #f9f9f9;
+    text-align: center;
+    padding-top: 30px;
+    margin: 0 auto;
+}
+
+.introduction {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+}
+
+.portfolio {
+    text-align: center;
+    padding: 40px 10px;
+}
+
+.summary {
+    padding: 0 2em 1em;
+}
+
+.contact {
+    text-align: center;
+    background-color: #f9f9f9;
+    margin-top: 0;
+    padding-top: 3em;
+    padding-bottom: 2em;
+}
+
+.contact-phone {
+    width: 230px;
+    margin: 0 auto;
+}
+
+.contact-email {
+    width: 255px;
+    margin: 0 auto;
+}
+
+.email,
+.phone {
+    float: left;
+}
+
+.phone-details a,
+.email-details a {
+    color: #878787;
+    font-weight: bold;
+}
+
+.email-details,
+.phone-details {
+    float: right;
+}
+
+footer {
+    background-color: #f9f9f9;
+}
+
+.footer-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    border-top: solid 2px #29dcda;
+}
+
+/* ------- Page Elements ------- */
+
+
+.portfolio h2 {
+    padding-bottom: 40px;
+}
+
+.selected {
+    color: #29dcda;
+}
+
+a:hover {
+    color: #29dcda;    
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+/* ---------- Phones ---------- */
+
+@media (min-width: 320px) {
+    
+    .contact-summary {
+        width: 90%;
+        margin: 0 auto;
+    }
+   
+    .footer-name {
+        float: left;
+    }
+    
+    .mobile-footer {
+        float: right;
+    }
+    
+    .footer-nav li{       /* ------- Hide Footer Navigation ------- */
+        display: none;
+    }
+        
+/* ------- Float clearfix ------- */
+
+	.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	} 
+}
+
+/* ---------- Tablets ---------- */
+
+@media (min-width: 650px) {
+    
+/* ------- Tablet Navigation ------- */
+    
+    .navigation-container ul{
+        display: inline-block;
+    }
+        
+    .navigation-container li {
+        float: left;
+        background-color: #f9f9f9; 
+    }
+    
+    .profile-wrapper {
+        margin: 0 auto;
+    }
+    
+    .intro-summary {
+        float: left;
+        width: 50%;  
+        padding-left: 40px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+    .intro-summary h3 {
+        margin: 0;
+    }
+    
+    .profile-picture {
+        float: right;
+        width: 50%;
+    }
+    
+    .portfolio {
+        max-width: 70%;
+        margin: 0 auto;
+    }
+    
+    .portfolio-item {
+        width: 50%;
+        float: left;
+    }
+    
+    .contact-summary {
+        width: 60%;
+        margin: 0 auto;
+    }
+      
+    .mobile-footer {    /* ------- Hide Back To Top ------- */
+        display: none;
+    }
+    
+    .footer-nav {
+        float: right;
+    }
+    
+    .footer-nav li {
+        display: inline;
+        margin-right: 0px;
+        padding-left: 40px;
+        text-decoration: none;
+        color: #4a4a4a;
+        font-weight: bold;
+    }
+    
+/* ------- Float clearfix ------- */
+    
+    .portfolio-item:nth-child(2n) {
+    clear:left;
+    }    
+    
+    .clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}    
+}
+
+/* --------- Desktops --------- */
+
+@media (min-width: 1275px) {
+    
+    .wrapper {
+        max-width: 60%;
+        background-color: #f9f9f9;
+    }
+    
+    .portfolio {
+        background-color: white;
+    }
+    
+    .name {
+        float: left;
+        padding-top: 10px;
+        padding-left: 60px;
+    }    
+    
+    .navigation-container ul{
+        float: right;
+        padding-right: 20px;
+    }
+        
+    .navigation-container li {
+        float: left;
+        background-color: #f9f9f9; 
+    }
+        
+    .portfolio {
+        max-width: 95%;
+        margin: 0 auto;
+    }
+    
+    .portfolio-item {
+        width: 33%;
+        float: left;
+    }
+     
+/* ------- Float clearfix ------- */
+    
+    .portfolio-item:nth-child(2n) {
+    clear:none;
+    } 
+    
+    .portfolio-item:nth-child(5n) {
+    clear:left;
+    }
+
+	.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}   
+}
