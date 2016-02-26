@@ -13,7 +13,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.1em;
+    font-size: 1em;
     color: #4a4a4a;
     font-family: Arial, Verdana, sans-serif;
 }
@@ -27,13 +27,13 @@ h3 {
 
 h4 {
     color: #4a4a4a;
-    font-size: 1.4em;
+    font-size: 1.2em;
     font-weight: normal;
     font-family: Arial, Verdana, sans-serif;
 }
 
 p {
-    font-size: 1.2em;
+    font-size: 1em;
     line-height: 1.4;
     font-family: Arial, Verdana, sans-serif;
 }
@@ -101,7 +101,9 @@ img {
 }
 
 .summary {
-    padding: 0 2em 1em;
+    padding: 0 1em 1em;
+    width: 95%;
+    margin: 0 auto;
 }
 
 .contact {
@@ -115,6 +117,8 @@ img {
 .contact-phone {
     width: 230px;
     margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 0;
 }
 
 .contact-email {
@@ -138,6 +142,17 @@ img {
     float: right;
 }
 
+.phone h3,
+.phone-details p {
+    padding-bottom: 10px;
+    margin-bottom: 0;
+}
+
+.email h3,
+.email-details p {
+    margin-top: 0;
+}
+
 footer {
     background-color: #f9f9f9;
 }
@@ -157,6 +172,15 @@ footer {
 
 .selected {
     color: #29dcda;
+}
+
+.summary p {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.summary h4 {
+    margin-bottom: 10px;
 }
 
 a:hover {
@@ -182,6 +206,8 @@ a:hover {
     
     .mobile-footer {
         float: right;
+        font-size: .9em;
+        line-height: 1.7;
     }
     
     .footer-nav li{       /* ------- Hide Footer Navigation ------- */
@@ -199,7 +225,7 @@ a:hover {
 
 /* ---------- Tablets ---------- */
 
-@media (min-width: 650px) {
+@media (min-width: 768px) {
     
 /* ------- Tablet Navigation ------- */
     
@@ -234,7 +260,7 @@ a:hover {
     }
     
     .portfolio {
-        max-width: 70%;
+        max-width: 100%;
         margin: 0 auto;
     }
     
@@ -244,7 +270,7 @@ a:hover {
     }
     
     .contact-summary {
-        width: 60%;
+        width: 70%;
         margin: 0 auto;
     }
       
@@ -280,14 +306,16 @@ a:hover {
 
 /* --------- Desktops --------- */
 
-@media (min-width: 1275px) {
+@media (min-width: 992px) {
     
     .wrapper {
-        max-width: 60%;
+        max-width: 80%;
         background-color: #f9f9f9;
     }
     
     .portfolio {
+        max-width: 95%;
+        margin: 0 auto;
         background-color: white;
     }
     
@@ -307,14 +335,18 @@ a:hover {
         background-color: #f9f9f9; 
     }
         
-    .portfolio {
-        max-width: 95%;
-        margin: 0 auto;
+    .summary {
+        max-width: 80%;
     }
     
     .portfolio-item {
         width: 33%;
         float: left;
+    }
+    
+    .contact-summary {
+        width: 45%;
+        margin: 0 auto;
     }
      
 /* ------- Float clearfix ------- */
